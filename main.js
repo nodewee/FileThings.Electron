@@ -27,6 +27,9 @@ const { dialog } = require('electron');
 //
 const { autoUpdater } = require("electron-updater");
 
+//
+const isDev = require('electron-is-dev');
+
 const updateServer = 'https://filethings.net'
 const updateFeed = `${updateServer}/download/${process.platform}`
 //${app.getVersion()}
@@ -59,7 +62,9 @@ function createWindow() {
     }
   })
 
-  // mainWindow.openDevTools(); // 打开浏览器开发工具
+  if (isDev) {
+    mainWindow.openDevTools(); // 打开浏览器开发工具
+  }
   mainWindow.loadFile(`./home/index.html`); //首页
 
   mainWindow.on('closed', function () {
@@ -71,7 +76,7 @@ function createWindow() {
   mainWindow.on('ready-to-show', function () {
     autoUpdater.checkForUpdates();
   });
-  
+
 
 
 
@@ -181,8 +186,8 @@ function updateHandle() {
     // if (!silentUpdate) {
     //   mainWindow.webContents.send('updateMsg', message.updateAva)
     // }
-      mainWindow.webContents.send('new-version', info.version)
-      console.log("---"+info.version)
+    mainWindow.webContents.send('new-version', info.version)
+    console.log("---" + info.version)
   });
   // autoUpdater.on('update-not-available', function (info) {
   //   if (!silentUpdate) {
