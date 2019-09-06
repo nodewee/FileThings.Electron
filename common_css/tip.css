@@ -1,0 +1,58 @@
+
+
+/* tips */
+.tips {
+    -webkit-app-region: no-drag;
+    
+    position:fixed;
+    /* float:left; */
+    left:0;
+    top: 2rem;
+    z-index: 99999;
+    
+    
+    width: 100%;
+    background: transparent;
+    padding-left: 2em;
+    padding-right: 2em;
+
+}
+
+.tip,
+.undo {
+    display: none;
+    margin-bottom: 0.5em;
+    padding: 2px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tip {
+    font-size: 14px;
+    color: #eee;
+    background: rgba(48, 55, 17,0.85);
+
+    box-shadow: 0.1em 0.1em 0.7em rgba(0,0,0,0.5);
+}
+
+.undo {
+    font-size: 14px;
+    color: #eee;
+    background: #483d10;
+}
+
+#undo {
+    font-size: larger;
+    text-underline-position: below;
+    color: rgb(163, 190, 237);
+    padding: 5px 5px 5px 5px;
+    margin-right: 0.5em;
+    background-color: transparent;
+}
+
+.undo .title {
+    font-size: 14px;
+    color: #eee;
+}

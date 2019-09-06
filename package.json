@@ -1,0 +1,64 @@
+{
+  "name": "file_things",
+  "version": "0.0.9",
+  "description": "File Things,",
+  "main": "main.js",
+  "author": "NodeWee",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "mac": "electron-builder --mac",
+    "win": "electron-builder --win",
+    "linux": "electron-builder --linux",
+    "dist": "electron-builder --mwl"
+  },
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "big-integer": "^1.6.43",
+    "electron-updater": "^4.0.6",
+    "file-type": "^9.0.0",
+    "is_js": "^0.9.0",
+    "jquery": "^3.3.1",
+    "piexifjs": "^1.0.4",
+    "read-chunk": "^3.0.0",
+    "to-ico": "^1.1.5",
+    "webp-converter": "^2.2.3"
+  },
+  "devDependencies": {
+    "electron": "^4.1.4",
+    "electron-builder": "^20.39.0"
+  },
+  "build": {
+    "appId": "live.redesign.file_things",
+    "copyright": "Copyright 2019 ${author}",
+    "productName": "FileThings",
+    "publish": [
+      {
+        "provider": "generic",
+        "url": ""
+      }
+    ],
+    "mac": {
+      "icon": "icons/mac.icns",
+      "artifactName": "${productName}_mac_${version}.${ext}"
+    },
+    "win": {
+      "icon": "icons/win/256.ico",
+      "artifactName": "${productName}_win_${version}.${ext}"
+    },
+    "linux": {
+      "icon": "icons/source.png",
+      "artifactName": "${productName}_linux_${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true,
+      "installerIcon": "./icons/win/256.ico",
+      "uninstallerIcon": "./icons/win/256.ico"
+    }
+  }
+}

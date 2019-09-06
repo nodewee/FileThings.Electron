@@ -1,0 +1,59 @@
+/* Thing Box */
+
+
+.action_area {
+
+  min-height: 200px;
+
+
+  color: rgb(200, 200, 200);
+
+  margin: 0;
+  padding: 0.5em;
+  border-radius: 1rem;
+
+  border: 2px solid transparent;
+
+  /* box-shadow: 0 0 1rem rgba(0, 0, 0, 1); */
+
+  transition: .3s all ease-in-out;
+
+  /* background: -webkit-radial-gradient(rgba(77, 77, 77, 1), rgba(66, 66, 66, 1), rgba(55, 55, 55, 1)); */
+  background: rgba(55, 55, 55, 1);
+
+}
+
+
+
+
+.action_area .desc {
+  -webkit-user-select: none;
+
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  color: #999;
+  font-size: smaller;
+}
+
+.action_area .option {
+  -webkit-app-region: no-drag;
+
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: smaller;
+}
+
+
+
+
+.action_area input,
+.action_area selec {
+  border: 1px solid transparent;
+}
+
+.action_area input:hover,
+.action_area select:hover {
+  border: 1px solid blue;
+}

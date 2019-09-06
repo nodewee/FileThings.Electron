@@ -1,0 +1,145 @@
+
+
+.add_bar{
+  margin-bottom: 1em;
+}
+
+
+.add_tip_left,
+.add_tip_middle ,
+.add_tip_right {
+  -webkit-user-select: none;
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+
+  transition: .3s all ease-in-out;
+
+}
+
+
+
+
+.add_tip_left .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  color: rgba(200, 200, 200, 1);
+
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.filethings{
+    position: absolute;
+    z-index: 5000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  
+    margin: 0;
+    padding: 0;
+    /* width: 80%; */
+}
+
+.filethings button{
+  font-weight: bold;
+  margin: 0;
+}
+.filethings .dropdown-menu, .filethings .dropdown-item{
+  margin: 0;
+  background: rgb(108,117,125);
+  color: rgb(220,220,220);
+
+  cursor: pointer;
+}
+.filethings .dropdown-item:hover{
+  background: rgb(21,127,251);
+  color:rgb(255,255,255);
+}
+
+
+
+.add_tip_right .child {
+  width: 100%;
+
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: left;
+
+  color: rgba(150, 150, 150, 1);
+  font-size: small;
+}
+
+
+
+#btn_add {
+  -webkit-app-region: no-drag;
+
+  height: 12rem;
+  width: 12rem;
+
+  margin: 0 auto;
+
+  position: relative;
+  z-index: 10000;
+}
+
+#btn_add .circle {
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  height: 75%;
+
+  border-radius: 50%;
+  border: 1px solid transparent;
+
+  background: -webkit-radial-gradient(rgba(200, 200, 200, 1), rgba(180, 180, 180, 1), rgba(160, 160, 160, 1));
+
+  transition: .3s all ease-in-out;
+}
+
+.circle svg {
+  fill: rgba(84, 75, 106);
+  transition: .3s all ease-in-out;
+}
+
+#btn_add:hover .circle {
+  box-shadow: 0 0 1.2rem rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
+  width: 85%;
+  height: 85%;
+}
+
+.holder-ondrag #btn_add .circle {
+  width: 85%;
+  height: 85%;
+
+  animation: border_flash 1s infinite alternate;
+}
+
+@keyframes border_flash {
+  from {
+    border-color: rgba(255, 255, 0, 0);
+    box-shadow: 0 0 2rem rgba(255, 255, 0, 0);
+  }
+
+  to {
+    border-color: rgb(255, 255, 0);
+    box-shadow: 0 0 2rem rgba(255, 255, 0, 1);
+  }
+}

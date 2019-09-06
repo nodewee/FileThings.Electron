@@ -1,0 +1,108 @@
+/* ===== WINDOW Button CSS ===== */
+
+.window_bar,
+.window_bar * {
+    -webkit-user-select: none;
+}
+
+
+.window_bar {
+    z-index: 2000;
+
+    margin: 0;
+    padding: 0;
+    height: 1.8em;
+    width: 100%;
+}
+
+
+.window_bar_left {
+    text-align: left;
+}
+
+.window_bar_right {
+    text-align: right;
+}
+
+.window_middle {
+    text-align: center;
+
+    background-image: url("../images/name.svg");
+    background-origin: content-box;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* max-height: 1.6rem; */
+}
+
+
+
+
+
+
+
+
+
+/* --- window buttons --- */
+
+.window_buttons {
+    padding: 0 0.2em 0 0.2em;
+}
+
+.window_buttons button,
+.window_buttons .btn {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    color: transparent;
+    font-size: x-small;
+
+
+    text-align: center;
+    vertical-align: middle;
+
+    padding: 0;
+    margin: 0 0.2em 0 0.2em;
+
+    border: none;
+    box-shadow: none;
+
+    /* transition: .3s all ease-in-out; */
+}
+
+
+#window_buttons_on_left #window_close svg {
+    margin-left: -0.15em;
+}
+#window_buttons_on_right #window_close svg {
+    margin-left: 0.1em;
+}
+#window_max svg {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+.window_buttons:hover .btn {
+    color: white;
+    border: none;
+    box-shadow: none;
+}
+
+.window_buttons:hover #window_close {
+    background: red;
+}
+
+.window_buttons:hover #window_min {
+    background: orange;
+}
+
+.window_buttons:hover #window_max {
+    background: green;
+}
+
+.window_buttons .btn:hover {
+    box-shadow: 0 0 2em yellow;
+}

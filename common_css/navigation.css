@@ -1,0 +1,104 @@
+/* ===== Navigation CSS ===== */
+
+
+
+.back_icon {
+    border-radius: 50%;
+
+    border: none;
+    box-shadow: none;
+
+    transition: .3s all ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+/* back button */
+#top_back_bar_on_left,
+#top_back_bar_on_right {
+    padding: 0;
+    margin: 0;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+
+    transition: .3s all ease-in-out;
+}
+
+#top_back_bar_on_left {
+    border-bottom-right-radius: 0.5em;
+}
+
+#top_back_bar_on_right {
+    border-bottom-left-radius: 0.5em;
+}
+
+
+#top_back_bar_on_left:hover,
+#top_back_bar_on_right:hover {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+#top_back_bar_on_left .back_icon,
+#top_back_bar_on_right .back_icon {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#top_back_bar_on_left:hover .back_icon,
+#top_back_bar_on_right:hover .back_icon {
+    color: blue;
+    box-shadow: 0 0 2em blue;
+}
+
+
+
+
+
+
+
+
+
+/* === left back bar === */
+
+#left_back_bar {
+    -webkit-user-select: none;
+
+    position: fixed;
+    width: 1.3em;
+    height: 55%;
+    top: 50%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+
+    transform: translate(0, -50%);
+
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background: transparent;
+
+    z-index: 9999;
+
+    transition: .3s all ease-in-out;
+    text-align: center;
+    color: transparent;
+}
+
+#left_back_bar:hover {
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#left_back_bar .back_icon {
+    color: transparent;
+    font-size: large;
+}
+#left_back_bar:hover .back_icon {
+    color: blue;
+    box-shadow: 0 0 1em blue;
+}

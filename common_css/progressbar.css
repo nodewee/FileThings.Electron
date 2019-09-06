@@ -1,0 +1,9 @@
+
+
+/* ---------- 进度条 ---------- */
+
+.progress-wait {
+  background: url(../images/progress-overlay.gif) #eded19;
+  filter: alpha(opacity=65);
+  opacity: .65
+}

@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 'Source Han Sans', 'Source Han Sans CN', 'sans-serif', 'Apple LiGothic Medium', 'Microsoft YaHei', 'Microsoft JhengHei';
+}
+
+
+#scroll {
+    background: blue;
+}
+
+
+html,
+body {
+    -webkit-font-smoothing: antialiased;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+    /* overflow: hidden; */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+
+    color: #404040;
+    background: #2a2a2a url("../images/bg.png") 0 0 repeat;
+
+}
+
+
+/* font */
+span,
+div,
+p,
+ol,
+li,
+button,
+input {
+    font-family: 'Source Han Sans', 'Source Han Sans CN', 'sans-serif', 'Apple LiGothic Medium', 'Microsoft YaHei', 'Microsoft JhengHei';
+}
+
+
+.main,
+.window_bar, footer {
+    -webkit-app-region: drag;
+}
+
+
+
+.row,
+.col {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* not move window */
+a,
+label[for],
+select,
+input,
+button,
+.btn,
+.button,
+.dropdown-menu,
+.dropdown-item {
+    -webkit-app-region: no-drag;
+}
+
+
+/* no select */
+button,
+label[for],
+.dropdown-item {
+    -webkit-user-select: none;
+}
+
+
+
+/* cursor */
+a[href],
+label[for],
+select,
+button,
+.btn,
+.btn:hover,
+.pointer {
+    cursor: pointer;
+}
+
+input {
+    cursor: text;
+}
+
+
+
+/* 去掉默认的焦点蓝色边框 */
+.btn,
+button,
+a[href],
+button,
+.btn:focus {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+
+
+
+
+.main {
+    overflow: hidden;
+
+    width: 100%;
+    background: transparent;
+
+    padding: 0.5em;
+}
+
+
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+
+
+
+
+.app_paster {
+    background-image: url("../images/bg_appname.png");
+    /* background-repeat: repeat; */
+    /* background-position: center, center; */
+    /* background-attachment: fixed; */
+    background-color: #2a2a2a;
+}
+
+
+hr {
+    border-color: rgb(100, 100, 100);
+}
+
+
+
+/* -------------------------- */
+/*  element vertical middle   */
+.middle-parent {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.middle-child {
+    margin: 0;
+    padding: 0;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* -------------------------- */
+/*      button group         */
+.button_group {
+    padding: 0.1em;
+}
+
+.button_group .btn {
+    color: rgba(200, 200, 200, 1);
+    background: rgba(70, 70, 70, 1);
+}
+
+.button_group .left {
+    border-radius: 0.2em 0 0 0.2em;
+}
+
+.button_group .mid {
+    border-radius: 0;
+    margin-left: 1px;
+}
+
+.button_group .right {
+    margin-left: 1px;
+    border-radius: 0 0.2em 0.2em 0;
+}
+
+.button_group .btn:hover {
+    background: rgba(50, 50, 50, 1)
+}
+
+.button_group .current {
+    font-weight: bold;
+    background: rgba(70, 70, 100, 1)
+}
+
+
+
+
+/* 自定义颜色 */
+.color-inputwhite {
+    background: rgb(220, 220, 220);
+}
+
+.color-inputwhite:hover {
+    background: rgb(250, 250, 250);
+}

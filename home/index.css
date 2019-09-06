@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+
+
+.main {
+  background: transparent;
+}
+
+
+
+/* ==== SEARCH BAR ===== */
+
+#searchbar {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.1em 1em 0.1em 1em;
+}
+
+#searchbar input {
+  width: 100%;
+
+  border-radius: 9999px;
+  /* 去掉默认的焦点蓝色边框 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* -webkit-user-modify: read-write-plaintext-only; */
+  outline: none;
+
+  padding-left: 0.8rem;
+  padding-right: 0.5rem;
+
+  background-color: rgba(66, 66, 66, 1);
+  border: 1px solid rgba(66, 66, 66, 1);
+  color: rgba(128, 128, 128, 1);
+
+  transition: all .3s ease-in-out;
+}
+
+#searchbar input::selection {
+  background: rgb(255, 255, 255);
+}
+
+
+#searchbar input:hover {
+  border-color: rgba(168, 168, 208, 1);
+  /* outline: 1px; */
+  box-shadow: 0 0 1em rgba(208, 208, 208, 1);
+}
+
+#searchbar .search_icon {
+  color: rgba(128, 128, 128, 1);
+
+  position: absolute;
+  right: 0.5em;
+  top: 18%;
+}
+
+
+
+#searchbar .col {
+  background: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+/* ==== BUTTONS ===== */
+
+
+#function_buttons {
+  margin-top: 0.5em;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+}
+
+#function_buttons .col {
+  /* background: rgba(200, 200, 200, 1); */
+  background: transparent;
+  margin: 0.5rem;
+  /* padding: 0.5rem; */
+  border-radius: 0.5em;
+  transition: .3s all ease-in-out;
+}
+
+
+#function_buttons .btn {
+
+  min-height: 2.5rem;
+
+  font-size: small;
+
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  will-change: box-shadow, transform;
+
+  color: #f5f5fae1;
+  font-weight: bold;
+  text-shadow: 0 1px 0 #3447dd;
+  text-decoration: none;
+
+  /* background: linear-gradient(#8995f5, #3447dd) no-repeat; */
+  /* box-shadow: 0 7px 13px -3px rgba(45, 35, 66, 0.3), 0 2px 4px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #4b58ba; */
+
+  /* border: 1px solid rgba(255,255,255,0); */
+
+  display: inline-flex;
+  border-radius: 9999px;
+  box-sizing: border-box;
+
+  padding-left: 1em;
+  padding-right: 1em;
+
+
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+
+  cursor: pointer;
+
+
+
+
+
+  /* background: #5468ff; */
+  /* color: #fff; */
+
+  /* border: 1px solid transparent;
+  color: rgba(208, 208, 208, 1); */
+
+  /* background: linear-gradient(180deg, rgba(21,127,251,1), rgba(11,107,221,1)); 标准的语法 */
+
+  /* transition: .2s all ease-in-out; */
+}
+
+#function_buttons .btn:hover {
+  box-shadow: 0 11px 16px -3px rgba(45, 35, 66, 0.3), 0 4px 5px 0 rgba(45, 35, 66, 0.4), inset 0 -2px 0 0 #4b58ba;
+  transform: translateY(-2px);
+  will-change: box-shadow, transform;
+  text-shadow: 0 1px 0 #3447dd;
+  background: linear-gradient(#8995f5, #3447dd) no-repeat;
+
+  /* border: 1px dashed rgba(255,255,255,0.5); */
+
+  /* color: rgba(236, 236, 236, 1); */
+
+  /* border: 1px solid transparent; */
+
+  /* box-shadow: 0 0 1rem rgba(121, 227, 255, 1); */
+  /*21，127，251*/
+}
+
+#function_buttons .btn svg {
+  margin-right: 0.2em;
+}
+
+
+
+.file_function {
+  margin: 0.5em;
+  min-width: 5em;
+  max-width: 25em;
+  float: left;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  border-radius: 1em 1em 0 0;
+  
+  color: rgba(255, 255, 255, 0.5);
+  font-size: small;
+}
+
+footer a, footer .button {
+  color: rgba(255, 255, 255, 0.5);
+  transition: .3s all ease-in-out;
+  cursor: pointer;
+}
+
+footer a:hover, footer .button:hover {
+  color: rgba(255, 55, 55, 0.5);
+}
+
+footer .btn {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: small;
+}
+footer .btn:hover {
+  color: rgba(255, 55, 55, 0.5);
+}

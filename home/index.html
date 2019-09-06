@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: 'unsafe-inline'">
+  <script src="../common_js/head.js"></script>
+
+  <title>FileThings 文件那些事儿</title>
+
+  <!-- plugins -->
+  <script src="../node_plugins/popper.1.14.7.min.js"></script>
+  <link rel="stylesheet" href="../node_plugins/bootstrap.4.3.1.min.css">
+  <link rel="stylesheet" type="text/css" href="../node_plugins/fontawesome_v5.8.1_all.css">
+  <script defer src="../node_plugins/fontawesome_v5.8.1_all.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="../common_css/base.css">
+  <link rel="stylesheet" type="text/css" href="../common_css/tip.css">
+  <link rel="stylesheet" type="text/css" href="../common_css/window_button.css">
+  <link rel="stylesheet" type="text/css" href="../common_css/navigation.css">
+  <link rel="stylesheet" type="text/css" href="../common_css/addfile_area.css">
+  <link rel="stylesheet" type="text/css" href="../common_css/thing-box.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+
+<body>
+  <!-- Window Bar -->
+  <div class="window_bar row">
+
+    <div class="col window_bar_left">
+      <div class="row">
+
+        <div class="col window_buttons hide" id="window_buttons_on_left">
+          <button id="window_close" class="btn window_close"><i class="fas fa-times"></i></button>
+          <button id="window_min" class="btn window_min"><i class="fas fa-minus"></i></button>
+          <button id="window_max" class="btn window_max"><i class="fas fa-sort"></i></button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-6 window_middle"></div>
+
+    <div class="col window_bar_right">
+      <div class="row">
+
+        <div class="col window_buttons hide" id="window_buttons_on_right">
+          <button id="window_min" class="btn window_min"><i class="fas fa-minus"></i></button>
+          <button id="window_max" class="btn window_max"><i class="fas fa-sort"></i></button>
+          <button id="window_close" class="btn window_close"><i class="fas fa-times"></i></button>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+  <div class="tips">
+  </div>
+
+
+  <section class="main">
+
+    <!-- <div id="searchbar">
+      <div class="row">
+        <div class="col">
+
+          <input placeholder="搜索筛选" id="search_input" type="text" name="search_input" />
+          <i class="search_icon fas fa-search"></i>
+        </div>
+      </div>
+    </div> -->
+
+    <div id="function_buttons">
+      <div class="row">
+        <div class="col">
+
+          <div class="file_function" searchTag="jpeg exif 图片 gps 照片">
+            <a class="btn btn-primary btn-block" href="../ftExif/index.html?which=clear_all"><i
+                class="fas fa-file-image fa-2x"></i> 照片 EXIF 信息</a>
+          </div>
+
+
+          <div class="file_function" searchTag="图片格式转换 图片 格式 转换 convert image">
+            <a class="btn btn-primary btn-block" href="../ftImageConverter/index.html"><i
+                class="fas fa-images fa-2x"></i>
+              图片格式转换</a>
+          </div>
+
+          <div class="file_function" searchTag="重命名 rename">
+            <a class="btn btn-primary btn-block" href="../ftRename/index.html?which=rename_by_createtime"><i
+                class="fas fa-file fa-2x"></i>
+              重命名文件</a>
+          </div>
+
+
+          <div class="file_function" searchTag="合并 子文件夹 merge subfolder">
+            <a class="btn btn-primary btn-block" href="../ftMergeSubFolder/index.html"><i
+                class="fas fa-folder-minus fa-2x"></i>
+              合并子文件夹</a>
+          </div>
+
+          <div class="file_function" searchTag="clear 清除 清理">
+            <a class="btn btn-primary btn-block" href="../ftClear/index.html"><i class="fas fa-broom fa-2x"></i>
+              清理非必要文件</a>
+          </div>
+
+
+          <div class="file_function" searchTag="统计 statistics calculate">
+            <a class="btn btn-primary btn-block" href="../ftCalculate/index.html"><i class="fas fa-file-alt fa-2x"></i>
+              统计文件</a>
+          </div>
+
+          <!-- <div class="file_function" searchTag="归类 分类 整理 classify">
+            <a class="btn btn-primary btn-block" href="../ftClassify/index.html"><i class="fas fa-folder fa-2x"></i>
+              整理文件</a>
+          </div> -->
+
+
+        </div>
+
+
+      </div>
+
+  </section>
+
+
+
+  <footer class="app_paster">
+
+    <div id="progress_box" class="progress hide">
+      <div id="progress_bar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+        aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+    </div>
+
+    <div class="row">
+
+      <div class="col-4 middle-parrent">
+        <button id="checkUpdate" class="btn" data-toggle="tooltip" title="点击打开下载页">V<span id="version"></span>(测试)
+          <sup><span id="version_new" class="badge badge-info hide" data-toggle="tooltip"
+              title="有新版本">NEW</span></sup></button>
+      </div>
+
+      <div class="col-3">
+        <button id="gosite" class="btn">filethings.net</button>
+      </div>
+
+      <div class="col-5 middle-parrent">
+        <div class="middle-child">
+          <a class="button" href="mailto:nodewee@gmail.com?subject=FileThings 反馈：" data-toggle="tooltip"
+            title="发邮件">反馈</a>/
+          <span class="button" id="qqgroup" data-toggle="tooltip" title="点击复制 QQ 群号码">Q群 622192273</span>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../node_plugins/bootstrap.4.3.1.js"></script>
+  <script src="../common_js/foot.js"></script>
+  <script src="../common_js/disable_window_dragdrop.js"></script>
+  <script src="search.js"></script>
+  <script src="png2icon.js"></script>
+  <script src="home.js"></script>
+
+
+</body>
+
+</html>
