@@ -35,15 +35,6 @@ steps:
   inputs:
     gitHubConnection: 'publish_filethings_app'
     repositoryName: '$(Build.Repository.Name)'
-    action: 'edit'
-    target: 'latest'
-    releaseNotesSource: 'input'
-    addChangeLog: false
-
-- task: GitHubRelease@0
-  inputs:
-    gitHubConnection: 'publish_filethings_app'
-    repositoryName: '$(Build.Repository.Name)'
     action: 'create'
     target: '$(Build.SourceVersion)'
     tagSource: 'manual'
