@@ -17,8 +17,8 @@ steps:
 
 
 - script: |
-  yarn install
-  yarn linux
-  yarn mac
-  yarn win
+    yarn install
+    yarn linux
+    yarn mac
+    yarn win
   displayName: 'install and build'
