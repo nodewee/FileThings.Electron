@@ -15,7 +15,8 @@ steps:
     versionSpec: '11.x'
   displayName: 'Install Node.js'
 
-- script:
+
+- script: |
   yarn install
   yarn linux
   yarn mac
