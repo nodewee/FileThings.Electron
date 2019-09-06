@@ -10,15 +10,22 @@ pool:
   vmImage: 'ubuntu-16.04'
 
 steps:
-- task: NodeTool@0
+- task: UseNode@1
   inputs:
-    versionSpec: '11.x'
-  displayName: 'Install Node.js'
-
+    version: '11.x'
 
 - script: |
     yarn install
+  displayName: 'install dependencies'
+
+- script: |
     yarn linux
+  displayName: 'build linux version'
+
+- script: |
     yarn mac
+  displayName: 'build mac version'
+
+- script: |
     yarn win
-  displayName: 'install and build'
+  displayName: 'build win version'
