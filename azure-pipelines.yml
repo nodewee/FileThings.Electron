@@ -14,20 +14,8 @@ steps:
   inputs:
     version: '11.x'
 
-- script: |
-    yarn install
-  displayName: 'install dependencies'
 
-- script: |
-    yarn linux
-  displayName: 'build linux version'
+- script: echo '$(Build.Repository.Name)'
 
-- script: |
-    yarn mac
-  displayName: 'build mac version'
-
-- script: |
-    yarn win
-  displayName: 'build win version'
-
+- script: echo '$(Build.ArtifactStagingDirectory)'
 
