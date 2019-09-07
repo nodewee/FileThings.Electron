@@ -28,3 +28,13 @@ steps:
     cd $(Build.ArtifactStagingDirectory)
     ls
 
+- task: GitHubRelease@0
+  inputs:
+    gitHubConnection: 'publish_filethings_app'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'edit'
+    target: '$(Build.SourceVersion)'
+    tag: 'latest'
+    compareWith: 'lastFullRelease'
+  displayName: 'auto github release'
+  
