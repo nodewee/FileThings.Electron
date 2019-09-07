@@ -15,7 +15,16 @@ steps:
     version: '11.x'
 
 
-- script: echo '$(Build.Repository.Name)'
+- script: |
+    yarn install
+  displayName: 'install dependencies'
 
-- script: echo '$(Build.ArtifactStagingDirectory)'
+
+- script: |
+    yarn linux
+  displayName: 'build linux version'
+
+- script: |
+    cd $(Build.ArtifactStagingDirectory)
+    ls
 
