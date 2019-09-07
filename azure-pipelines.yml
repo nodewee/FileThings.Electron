@@ -31,13 +31,3 @@ steps:
   displayName: 'build win version'
 
 
-- task: GitHubRelease@0
-  inputs:
-    gitHubConnection: 'publish_filethings_app'
-    repositoryName: '$(Build.Repository.Name)'
-    action: 'create'
-    target: '$(Build.SourceVersion)'
-    tagSource: 'manual'
-    tag: '$(Build.SourceVersion)'
-    title: '$(Build.SourceVersion)'
-    compareWith: 'lastFullRelease'
