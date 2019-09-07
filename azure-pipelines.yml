@@ -11,9 +11,28 @@ pool:
 
 steps:
 
+- task: UseNode@1
+  inputs:
+    version: '11.x'
+
+
 - script: |
-    echo '$(Build.ArtifactStagingDirectory)'
-    cd '$(Build.ArtifactStagingDirectory)'
-    ls
+    yarn install
+  displayName: 'install dependencies'
 
 
+- script: |
+    yarn linux
+  displayName: 'build linux version'
+
+- task: GitHubRelease@0
+  inputs:
+    gitHubConnection: 'publish_filethings_app'
+    repositoryName: '$(Build.Repository.Name)'
+    action: 'create'
+    target: '$(Build.SourceVersion)'
+    tagSource: 'auto'
+    tagPattern: '$(Build.SourceVersion)'
+    title: '$(Build.SourceVersion)'
+    releaseNotesSource: 'input'
+    compareWith: 'lastFullRelease'
