@@ -10,31 +10,10 @@ pool:
   vmImage: 'macos-10.13'
 
 steps:
-- task: UseNode@1
-  inputs:
-    version: '11.x'
-
 
 - script: |
-    yarn install
-  displayName: 'install dependencies'
-
-
-- script: |
-    yarn linux
-  displayName: 'build linux version'
-
-- script: |
-    cd $(Build.ArtifactStagingDirectory)
+    echo '$(Build.ArtifactStagingDirectory)'
+    cd '$(Build.ArtifactStagingDirectory)'
     ls
 
-- task: GitHubRelease@0
-  inputs:
-    gitHubConnection: 'publish_filethings_app'
-    repositoryName: '$(Build.Repository.Name)'
-    action: 'edit'
-    target: '$(Build.SourceVersion)'
-    tag: 'latest'
-    compareWith: 'lastFullRelease'
-  displayName: 'auto github release'
-  
+
