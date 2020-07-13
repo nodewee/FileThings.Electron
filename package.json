@@ -26,7 +26,7 @@
     "webp-converter": "^2.2.3"
   },
   "devDependencies": {
-    "electron": "^4.1.4",
+    "electron": "^9.1.0",
     "electron-builder": "^20.39.0"
   },
   "build": {
